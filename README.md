@@ -3,18 +3,21 @@
 
 ### Como executar o programa:
 
-1. No terminal do linux, ou no prompt do windows, digite o seguinte comando para copiar o projeto:
+1. No terminal do linux, ou no prompt do windows, digite o seguinte comando para copiar o projeto para a sua máquina:
 ```
 git clone https://github.com/farneze/teste-front-end.git
 ```
 
 2. Em seguida, acesse a pasta 'teste-front-end' com o comando:
+```
+cd teste-front-end
+```
 
 3. E verifique se o NodeJS está instalado com o comando:
 ```
 node -v
 ```
-  Caso o console devolva "v16.4.1" ou algo similar, prossiga.
+  Prossiga caso o console devolva "v16.4.1" ou algo similar, caso contrário, instale o NodeJS.
 
 4. Instale os modulos utilizados com o comando:
 ```
