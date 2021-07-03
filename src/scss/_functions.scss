@@ -1,0 +1,56 @@
+@mixin flex-standard() {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: space-around;
+}
+
+@mixin flex-center($dir, $justify) {
+  @include flex-standard();
+  flex-direction: $dir;
+  justify-content: $justify;
+}
+
+$flex: "r" "row" "", "c" "column" "", "evenly" "" "space-evenly",
+  "between" "" "space-between";
+
+@each $flex-name, $direction, $justify in $flex {
+  .flex-#{$flex-name} {
+    @include flex-standard();
+    flex-direction: #{$direction};
+  }
+
+  .f-#{$flex-name} {
+    justify-content: #{$justify};
+  }
+}
+
+$foot-text: "title" 700 14px, "item" 400 12px, "newsletter" 400 14px;
+
+@each $text-setting, $weight, $size in $foot-text {
+  .text-#{$text-setting} {
+    font-weight: $weight;
+    font-size: $size;
+  }
+}
+
+@mixin button-style($btn-color, $hover-color) {
+  border: 1px;
+  border-color: $btn-color;
+  border-radius: 7px;
+  border-style: solid;
+
+  margin-top: 25px;
+  background-color: Transparent;
+
+  color: $btn-color;
+  min-width: 44px;
+  padding: 18px 44px;
+  text-align: center;
+
+  &:hover {
+    background-color: $btn-color;
+    border-color: $btn-color;
+    color: $hover-color;
+  }
+}
